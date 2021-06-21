@@ -1,10 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+@import url('https://weloveiconfonts.com/api/?family=fontawesome');
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    -webkit-appearance: none;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f100;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 body {
     margin: 0;
-    width: 100vw;
-    height: 100vh;
     background: #ecf0f3;
     display: flex;
     align-items: center;
@@ -21,6 +41,7 @@ body {
     height: 500px;
     border-radius: 20px;
     padding: 40px;
+    margin-top: 1rem;
     box-sizing: border-box;
     background: #ecf0f3;
     box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
@@ -30,8 +51,11 @@ body {
     position: relative;
     width: 650px;
     height: 500px;
+    overflow-x: hidden;
+    overflow-y: scroll;
     border-radius: 20px;
     padding: 40px;
+    margin-top: 3rem;
     box-sizing: border-box;
     background: #ecf0f3;
     box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
@@ -120,6 +144,11 @@ body {
     color: #ecf0f3;
 }
 
+.icon {
+    display: none;
+    font-style: normal;
+}
+
 .custom-checkbox {
     width: 20px;
     height: 20px;
@@ -145,11 +174,22 @@ body {
 }
 
 td {
-    width: auto;
+    text-align: left;
 }
 
-@media screen and (min-width:600px) {
-    .custom-container {
-        margin-top: 1rem;
+@media only screen and (max-width: 600px) {
+    .custom-container-2 {
+        width: 350px;
+    }
+    .edit,
+    .delete {
+        width: 35px;
+        height: 35px;
+    }
+    .icon {
+        display: block;
+    }
+    .button-text {
+        display: none;
     }
 }

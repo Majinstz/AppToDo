@@ -7,32 +7,45 @@
 
     <div *ngIf="Todo.length !== 0">
         <h3 class="mb-3 text-center">Todo List</h3>
+        <button class="todobutton" routerLink="/create-todo">Add Todo</button>
 
         <div class="col-md-12">
             <table class="table align-middle table-hover border-bottom border-dark">
+                <thead>
+                    <tr class="d-flex">
+                        <td class="flex-fill">Todo</td>
+                        <td class="justify-contnet-end">Edit</td>
+                        <td class="justify-contnet-end">Delete</td>
+                    </tr>
+                </thead>
                 <tbody>
                     <tr *ngFor="let todo of Todo" class="d-flex">
-                        <td class="col-1">
+                        <td class="justify-contnet-start">
                             <label class="custom-checkbox">
                                 <input type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
                         </td>
-                        <td class="content col-7">{{todo.content}}</td>
-                        <td class="col-2"><button class="edit" routerLink="/todo-edit/{{todo.id}}">Edit</button></td>
-                        <td class="col-2"><button class="delete" (click)="deleteTodo(todo.id)">Delete</button></td>
+                        <td class="content flex-fill">{{todo.content}}</td>
+                        <td class="col-2 justify-contnet-end">
+                            <button class="edit" routerLink="/todo-edit/{{todo.id}}">
+                                <i class="fontawesome-edit icon"></i>
+                                <span class="button-text">
+                                    Edit
+                                </span>
+                            </button>
+                        </td>
+                        <td class="col-2 justify-contnet-end">
+                            <button class="delete" (click)="deleteTodo(todo.id)">
+                                <i class="fontawesome-remove icon"></i>
+                                <span class="button-text">
+                                    Delete
+                                </span>
+                            </button>
+                        </td>
                     </tr>
                 </tbody>
-                <tfoot>
-                    <tr class="d-flex">
-                        <td class="col-1">Done</td>
-                        <td class="col-7">Todo</td>
-                        <td class="col-2">Edit</td>
-                        <td class="col-2">Delete</td>
-                    </tr>
-                </tfoot>
             </table>
-            <button class="todobutton" routerLink="/create-todo">Add Todo</button>
         </div>
 
     </div>
