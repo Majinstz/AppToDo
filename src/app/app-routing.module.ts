@@ -5,8 +5,8 @@ import { TodoEditComponent } from './todo-edit/todo-edit.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'create-todo'},
-  { path: 'create-todo', component: TodoCreateComponent },
+  { path: '', component: TodoCreateComponent },
+  { path: 'create-todo', component: TodoCreateComponent},
   { path: 'todo-list', component: TodoListComponent},
   { path: 'todo-edit/:id', component: TodoEditComponent}
 ];
