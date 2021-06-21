@@ -1,14 +1,15 @@
 <div class="container custom-container">
     <div class="col-md-12">
+        <div class="brand-logo"><img src="../../assets/todo.png" alt="Logo" id="logo"></div>
+        <h3 class="mb-3 text-center title">Update ToDos</h3>
 
-        <h3 class="mb-3 text-center">Update ToDos</h3>
-
-        <div class="form-group">
-            <input type="text" [(ngModel)]="todoData.content" class="form-control" placeholder="What ToDo..?">
+        <div class="todoform">
+            <div class="form-group">
+                <input type="text" [(ngModel)]="todoData.content" class="todoinput" placeholder="What ToDo..?" (keyup.enter)="updateTodo()">
+            </div>
+            <div class="form-group">
+                <button class="todobutton" (click)="updateTodo()">Update Todos</button>
+            </div>
         </div>
-        <div class="form-group">
-            <button class="btn btn-success btn-lg btn-block" (click)="updateTodo()">Update Todos</button>
-        </div>
-
     </div>
 </div>

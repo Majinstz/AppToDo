@@ -2,29 +2,24 @@
 
     <div class="no-data text-center" *ngIf="Todo.length == 0">
         <p>There is no todo added yet!</p>
-        <button class="btn btn-outline-primary" routerLink="/create-todo">Add Todo</button>
+        <button class="todobutton" routerLink="/create-todo">Add Todo</button>
     </div>
 
     <div *ngIf="Todo.length !== 0">
         <h3 class="mb-3 text-center">Todo List</h3>
 
         <div class="col-md-12">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th scope="col">Todo Id</th>
-                        <th scope="col">Content</th>
-                    </tr>
-                </thead>
+            <table class="table">
                 <tbody>
                     <tr *ngFor="let todo of Todo">
                         <td>{{todo.id}}</td>
                         <td>{{todo.content}}</td>
-                        <td><span class="edit" routerLink="/todo-edit/{{todo.id}}">Edit</span></td>
-                        <td><span class="delete" (click)="deleteTodo(todo.id)">Delete</span></td>
+                        <td><button class="edit" routerLink="/todo-edit/{{todo.id}}">Edit</button></td>
+                        <td><button class="delete" (click)="deleteTodo(todo.id)">Delete</button></td>
                     </tr>
                 </tbody>
             </table>
+            <button class="todobutton" routerLink="/create-todo">Add Todo</button>
         </div>
 
     </div>

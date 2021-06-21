@@ -20,8 +20,10 @@ export class TodoCreateComponent implements OnInit {
   }
 
   addTodo() {
+    if( this.todoDetails.content != "") {
     this.restApi.createTodo(this.todoDetails).subscribe((data: {}) => {
       this.router.navigate(['/todo-list'])
     })
   }
+}
 }

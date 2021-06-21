@@ -1,1 +1,146 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #ecf0f3;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    place-items: center;
+    overflow: hidden;
+    font-family: poppins;
+}
+
+.custom-container {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #ecf0f3;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+
+.custom-container-2 {
+    position: relative;
+    width: 650px;
+    height: 500px;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #ecf0f3;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+
+.brand-logo {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+}
+
+#logo {
+    position: absolute;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    margin-top: 10px;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: #323232;
+    letter-spacing: 1px;
+}
+
+.todoform {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.todoinput,
+.todobutton {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.todoinput {
+    background: #ecf0f3;
+    padding: 10px;
+    padding-left: 20px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+.todobutton {
+    margin-top: 20px;
+    background: #323232;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    transition: 0.5s;
+    color: #ecf0f3;
+}
+
+.todobutton:hover {
+    box-shadow: none;
+}
+
+td {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.edit {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    background: #323232;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    transition: 0.5s;
+    color: #ecf0f3;
+}
+
+.delete {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    background: #323232;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    transition: 0.5s;
+    color: #ecf0f3;
+}
