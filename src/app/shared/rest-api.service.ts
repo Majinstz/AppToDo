@@ -60,6 +60,7 @@ export class RestApiService {
     )
   }
 
+
   handleError(error) {
      let errorMessage = '';
      if(error.error instanceof ErrorEvent) {
