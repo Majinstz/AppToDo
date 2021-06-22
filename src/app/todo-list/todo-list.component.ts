@@ -24,7 +24,12 @@ export class TodoListComponent implements OnInit {
     })
   }
 
-  deleteTodo(id) {
+  onToggleTodoDone(todo) {
+    this.restApi.toggleTodoDone(todo).subscribe(data => {
+      this.loadTodos()
+    });
+  }
+    deleteTodo(id) {
     if (window.confirm('Are you sure, you want to delete?')) {
       this.restApi.deleteTodo(id).subscribe(data => {
         this.loadTodos()

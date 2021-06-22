@@ -22,11 +22,11 @@
                     <tr *ngFor="let todo of Todo" class="d-flex">
                         <td class="justify-contnet-start">
                             <label class="custom-checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" (click)="onToggleTodoDone(todo)" [checked]="todo.done">
                                 <span class="checkmark"></span>
                             </label>
                         </td>
-                        <td class="content flex-fill">{{todo.content}}</td>
+                        <td class="content flex-fill" [class.done]="todo.done">{{todo.content}}</td>
                         <td class="col-2 justify-contnet-end">
                             <button class="edit" routerLink="/todo-edit/{{todo.id}}">
                                 <i class="fontawesome-edit icon"></i>

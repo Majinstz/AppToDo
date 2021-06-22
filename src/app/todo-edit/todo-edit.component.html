@@ -5,7 +5,7 @@
 
         <div class="todoform">
             <div class="form-group">
-                <input type="text" [(ngModel)]="todoData.content" class="todoinput" placeholder="What ToDo..?" (keyup.enter)="updateTodo()">
+                <input type="text" autofocus="" [(ngModel)]="todoData.content" class="todoinput" placeholder="What ToDo..?" (keyup.enter)="updateTodo()">
             </div>
             <div class="form-group">
                 <button class="todobutton" (click)="updateTodo()">Update Todos</button>

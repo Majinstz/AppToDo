@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Todo } from '../shared/todo';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
+import { identifierModuleUrl } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
@@ -52,6 +53,13 @@ export class RestApiService {
     )
   }
 
+  toggleTodoDone(todo: Todo){
+    let updatedTodo = this.updateTodo(todo.id, {
+      done: !todo.done
+    });
+    return updatedTodo;
+  }
+
   deleteTodo(id){
     return this.http.delete<Todo>(this.apiURL + '/todos/' + id, this.httpOptions)
     .pipe(
@@ -59,7 +67,6 @@ export class RestApiService {
       catchError(this.handleError)
     )
   }
-
 
   handleError(error) {
      let errorMessage = '';

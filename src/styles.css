@@ -51,8 +51,6 @@ body {
     position: relative;
     width: 650px;
     height: 500px;
-    overflow-x: hidden;
-    overflow-y: scroll;
     border-radius: 20px;
     padding: 40px;
     margin-top: 3rem;
@@ -126,6 +124,11 @@ body {
     font-weight: 900;
 }
 
+.done {
+    text-decoration: line-through;
+    color: gray;
+}
+
 .edit,
 .delete {
     display: block;
@@ -171,6 +174,14 @@ body {
 
 .custom-checkbox input {
     display: none;
+}
+
+tbody {
+    height: 300px;
+    display: inline-block;
+    width: 100%;
+    overflow: auto;
+    overflow-x: hidden;
 }
 
 td {
