@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-todo-edit',
   templateUrl: './todo-edit.component.html',
-  styleUrls: ['./todo-edit.component.css']
+  styleUrls: ['./todo-edit.component.scss']
 })
 export class TodoEditComponent implements OnInit {
   id = this.actRoute.snapshot.params['id'];

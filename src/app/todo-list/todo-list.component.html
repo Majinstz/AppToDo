@@ -12,16 +12,16 @@
         <button class="todobutton" (click)="addTodo()">Create Todo</button>
 
         <div class="col-md-12">
-            <table class="table align-middle table-hover border-bottom border-dark">
+            <table class="table align-middle table-hover">
                 <thead>
-                    <tr class="d-flex">
+                    <tr class="d-flex border-bottom border-dark">
                         <td class="flex-fill">Todo</td>
                         <td class="justify-contnet-end">Edit</td>
                         <td class="justify-contnet-end">Delete</td>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let todo of Todo" class="d-flex">
+                    <tr *ngFor="let todo of Todo" class="d-flex border-dark">
                         <td class="justify-contnet-start">
                             <label class="custom-checkbox">
                                 <input type="checkbox" (click)="onToggleTodoDone(todo)" [checked]="todo.done">

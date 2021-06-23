@@ -1,0 +1,17 @@
+.custom-container {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 1rem;
+}
+
+.custom-container-2 {
+    width: 600px;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+    @include medium {
+        width: 350px;
+    }
+}
