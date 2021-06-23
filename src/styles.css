@@ -35,6 +35,10 @@ body {
     font-family: poppins;
 }
 
+.content {
+    display: none;
+}
+
 .custom-container {
     position: relative;
     width: 350px;
@@ -120,7 +124,7 @@ body {
     box-shadow: none;
 }
 
-.content {
+.main-content {
     text-align: left;
     font-weight: 900;
 }

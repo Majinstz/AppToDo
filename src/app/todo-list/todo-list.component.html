@@ -2,12 +2,14 @@
 
     <div class="no-data text-center" *ngIf="Todo.length == 0">
         <p>There is no todo added yet!</p>
-        <button class="todobutton" routerLink="/create-todo">Add Todo</button>
+        <input type="text" autofocus="" [(ngModel)]="todoDetails.content" class="todoinput" placeholder="What ToDo..?" (keyup.enter)="addTodo()">
+        <button class="todobutton" (click)="addTodo()">Create Todo</button>
     </div>
 
     <div *ngIf="Todo.length !== 0">
         <h3 class="mb-3 text-center">Todo List</h3>
-        <button class="todobutton" routerLink="/create-todo">Add Todo</button>
+        <input type="text" autofocus="" [(ngModel)]="todoDetails.content" class="todoinput" placeholder="What ToDo..?" (keyup.enter)="addTodo()">
+        <button class="todobutton" (click)="addTodo()">Create Todo</button>
 
         <div class="col-md-12">
             <table class="table align-middle table-hover border-bottom border-dark">
@@ -26,7 +28,7 @@
                                 <span class="checkmark"></span>
                             </label>
                         </td>
-                        <td class="content flex-fill" [class.done]="todo.done">{{todo.content}}</td>
+                        <td class="main-content flex-fill" [class.done]="todo.done">{{todo.content}}</td>
                         <td class="col-2 justify-contnet-end">
                             <button class="edit" routerLink="/todo-edit/{{todo.id}}">
                                 <i class="fontawesome-edit icon"></i>

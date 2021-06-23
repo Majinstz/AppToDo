@@ -8,14 +8,12 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { FormsModule } from '@angular/forms';
 
-import { TodoCreateComponent } from './todo-create/todo-create.component';
 import { TodoEditComponent } from './todo-edit/todo-edit.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoCreateComponent,
     TodoEditComponent,
     TodoListComponent
   ],

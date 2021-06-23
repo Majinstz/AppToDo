@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { RestApiService } from '../shared/rest-api.service';
 
 @Component({
@@ -9,9 +10,11 @@ import { RestApiService } from '../shared/rest-api.service';
 export class TodoListComponent implements OnInit {
 
   Todo: any = [];
+  @Input() todoDetails = { content: '' }
   
   constructor(
-    public restApi: RestApiService
+    public restApi: RestApiService,
+    public router: Router
   ) { }
 
   ngOnInit(): void {
@@ -29,6 +32,15 @@ export class TodoListComponent implements OnInit {
       this.loadTodos()
     });
   }
+
+  addTodo() {
+    if( this.todoDetails.content != "") {
+    this.restApi.createTodo(this.todoDetails).subscribe((data: {}) => {
+      this.loadTodos()
+    })
+  }
+  }
+
     deleteTodo(id) {
     if (window.confirm('Are you sure, you want to delete?')) {
       this.restApi.deleteTodo(id).subscribe(data => {
