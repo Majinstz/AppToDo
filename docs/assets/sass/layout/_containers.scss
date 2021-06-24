@@ -1,0 +1,30 @@
+@mixin container {
+    width: 600px;
+    margin-top: 2rem;
+    padding-top: 3rem;
+}
+
+@mixin mq() {
+    @media (max-width: 575px) {
+        @content;
+    }
+}
+
+
+.custom-container-2 {
+    @include container;
+    @include mq() {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 2rem;
+    }
+}
+
+.custom-container {
+    @include container;
+    @include mq() {
+        width:100%;
+    }
+}

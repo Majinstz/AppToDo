@@ -1,0 +1,15 @@
+@mixin inputs {  
+    outline: none;
+    border: 1px solid black;
+    border-radius: 25px;
+    height: 2.2rem;
+    width: 100%;
+    }
+    
+
+.todoinput {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    @include inputs;
+}

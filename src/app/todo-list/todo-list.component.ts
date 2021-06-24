@@ -2,6 +2,12 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { RestApiService } from '../shared/rest-api.service';
 
+/* Font Awesome Icons */
+import { faEdit, faCircle, faCheckCircle } from '@fortawesome/free-regular-svg-icons';
+import { faTrash, faCheck } from '@fortawesome/free-solid-svg-icons';
+
+
+
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
@@ -11,6 +17,10 @@ export class TodoListComponent implements OnInit {
 
   Todo: any = [];
   @Input() todoDetails = { content: '' }
+  edit = faEdit;
+  delete = faTrash;
+  circle = faCircle;
+  checked = faCheckCircle;
   
   constructor(
     public restApi: RestApiService,

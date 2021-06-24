@@ -1,4 +1,4 @@
-<div class="container custom-container-2">
+<div class="custom-container-2">
 
     <div class="no-data text-center" *ngIf="Todo.length == 0">
         <p>There is no todo added yet!</p>
@@ -7,40 +7,40 @@
     </div>
 
     <div *ngIf="Todo.length !== 0">
-        <h3 class="mb-3 text-center">Todo List</h3>
+        <h3 class="mb-3 text-center title">Todo List</h3>
         <input type="text" autofocus="" [(ngModel)]="todoDetails.content" class="todoinput" placeholder="What ToDo..?" (keyup.enter)="addTodo()">
         <button class="todobutton" (click)="addTodo()">Create Todo</button>
-
-        <div class="col-md-12">
+        <div class="">
             <table class="table align-middle table-hover">
                 <thead>
                     <tr class="d-flex border-bottom border-dark">
                         <td class="flex-fill">Todo</td>
-                        <td class="justify-contnet-end">Edit</td>
-                        <td class="justify-contnet-end">Delete</td>
+                        <td class="col-2 justify-content-end">Edit</td>
+                        <td class="col-2 justify-content-end">Delete</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let todo of Todo" class="d-flex border-dark">
-                        <td class="justify-contnet-start">
+                        <td class="justify-content-start">
                             <label class="custom-checkbox">
                                 <input type="checkbox" (click)="onToggleTodoDone(todo)" [checked]="todo.done">
-                                <span class="checkmark"></span>
+                                <fa-icon [icon]="circle" class="unchecked"></fa-icon>
+                                <fa-icon [icon]="checked" class="checked"></fa-icon>
                             </label>
                         </td>
                         <td class="main-content flex-fill" [class.done]="todo.done">{{todo.content}}</td>
-                        <td class="col-2 justify-contnet-end">
+                        <td class="col-2 justify-content-end">
                             <button class="edit" routerLink="/todo-edit/{{todo.id}}">
-                                <i class="fontawesome-edit icon"></i>
-                                <span class="button-text">
+                                <fa-icon [icon]="edit" class="icon"></fa-icon>
+                                <span class="edit-text">
                                     Edit
                                 </span>
                             </button>
                         </td>
-                        <td class="col-2 justify-contnet-end">
+                        <td class="col-2 justify-content-end">
                             <button class="delete" (click)="deleteTodo(todo.id)">
-                                <i class="fontawesome-remove icon"></i>
-                                <span class="button-text">
+                                <fa-icon [icon]="delete" class="icon"></fa-icon>
+                                <span class="delete-text">
                                     Delete
                                 </span>
                             </button>
