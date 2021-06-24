@@ -45,6 +45,10 @@ body {
 
 .table {
     width: 100%;
+    
+    td:first-child {
+        text-align: left;
+    }
 }
 
 .done {
@@ -54,4 +58,5 @@ body {
 
 .main-content {
     font-weight: bold;
+    text-align: left;
 }

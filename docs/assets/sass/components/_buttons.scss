@@ -3,7 +3,7 @@ border: none;
 outline: none;
 border-radius: 5px;
 height: 2.2rem;
-width: 100%;
+width: 90%;
 font-weight: bold;
 }
 
@@ -20,6 +20,7 @@ font-weight: bold;
     background: #8cbe7f;
     margin-bottom: 1rem;
     @include buttons;
+
 }
 
 .cancel {

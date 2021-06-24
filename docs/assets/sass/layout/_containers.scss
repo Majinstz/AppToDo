@@ -2,6 +2,9 @@
     width: 600px;
     margin-top: 2rem;
     padding-top: 3rem;
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,0.2);
+    border-radius: 25px;
+    text-align: center;
 }
 
 @mixin mq() {
@@ -13,6 +16,7 @@
 
 .custom-container-2 {
     @include container;
+    padding-bottom: 20px;
     @include mq() {
         display: flex;
         justify-content: center;
@@ -20,11 +24,25 @@
         width: 100%;
         padding-top: 2rem;
     }
+
+    &:before {
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+        content: '';
+    }
 }
 
 .custom-container {
     @include container;
+    height: 400px;
     @include mq() {
         width:100%;
+        height: 70vh;
+    }
+
+    &:before {
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+        content: '';
     }
 }

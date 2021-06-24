@@ -3,13 +3,12 @@
     border: 1px solid black;
     border-radius: 25px;
     height: 2.2rem;
-    width: 100%;
-    }
+    width: 90%;
+}
     
 
 .todoinput {
-    width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     padding-left: 1rem;
     @include inputs;
 }
